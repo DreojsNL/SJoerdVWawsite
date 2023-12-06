@@ -85,3 +85,11 @@ section {
 .card-content {
     padding: 20px;
 }
+.center-content {
+    text-align: center;
+}
+
+.about-me-image {
+    display: block;
+    margin: 0 auto;
+}
