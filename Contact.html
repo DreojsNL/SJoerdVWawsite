@@ -4,35 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Sjoerd</title>
-    <link rel="stylesheet" href="style.css"> <!-- Assuming you have a CSS file for styling -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS for additional styles -->
     <style>
-        /* Add custom styles here or link to an external CSS file */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light background color for contrast */
+        }
+
+        header, nav {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         section {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
+            align-items: flex-start; /* Align items to the start */
+            justify-content: space-around; /* Space out the form and image */
             margin-top: 20px;
+            padding: 20px;
+            background-color: white; /* White background for the section */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
 
         form {
             max-width: 400px;
+            flex: 1; /* Allow form to take up available space */
+            margin-right: 20px;
         }
 
         label {
             display: block;
             margin-bottom: 8px;
+            font-weight: bold; /* Make labels bold */
         }
 
         input,
         textarea {
             width: 100%;
-            padding: 8px;
+            padding: 10px; /* Increased padding for comfort */
             margin-bottom: 16px;
+            border: 1px solid #ccc; /* Subtle border */
+            border-radius: 4px; /* Rounded corners */
             box-sizing: border-box;
         }
 
@@ -41,7 +68,13 @@
             color: white;
             padding: 10px;
             border: none;
+            border-radius: 4px; /* Rounded corners */
             cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker shade on hover */
         }
 
         .social-links {
@@ -51,7 +84,7 @@
         }
 
         .social-link img {
-            width: 40px; /* Adjust the size as needed */
+            width: 40px;
             height: auto;
             margin-right: 20px;
         }
@@ -67,35 +100,35 @@
         <a href="index.html#about">About</a>
         <a href="contact.html">Contact</a>
     </nav>
-
     <section class="center-content">
         <div>
-            <form action="submit_form.php" method="post"> <!-- Change the action attribute to your form submission endpoint -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-
-            <div class="social-links">
-                <a href="https://www.instagram.com/sjoerd305/" class="social-link" target="_blank">
-                    <img src="Images/Instagram_icon.png" alt="Instagram">
-                </a>
-                <a href="mailto:s.f.j.dijksterhuis@gmail.com" class="social-link" target="_blank">
-                    <img src="Images/4672500.png" alt="Email">
-                </a>
-            </div>
-        </div>
-
-        <div>
-            <img src="Images/IMG-20230809-WA0000.jpg" alt="Contact Image" style="max-width: 200px;">
+            <img src="Images/Screenshot 2024-09-20 133722.png" alt="Contact Image" style="max-width: 200px; border-radius: 8px;">
         </div>
     </section>
+    <section class="center-content">
+        <form action="submit_form.php" method="post"> <!-- Change the action attribute to your form submission endpoint -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+
+    </section>
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/sjoerd305/" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="Images/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="mailto:s.f.j.dijksterhuis@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">
+            <img src="Images/4672500.png" alt="Email">
+        </a>
+    </div>
 </body>
 </html>

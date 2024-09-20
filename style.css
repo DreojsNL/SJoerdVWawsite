@@ -1,15 +1,23 @@
+/* Reset and Box Sizing */
+* {
+    box-sizing: border-box; /* Apply box-sizing globally */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6; /* Improved line height for readability */
+    background-color: #111111;
 }
 
-header {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
+/* Header and Navigation Styles */
+    header {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
 
 nav {
     display: flex;
@@ -17,28 +25,74 @@ nav {
     background-color: #444;
     padding: 10px;
 }
+.contact-btn {
+    background-color: #3498db; /* Button background color */
+    color: white;              /* Button text color */
+    border: none;              /* Remove default border */
+    padding: 10px 20px;        /* Padding inside the button */
+    font-size: 16px;           /* Font size of the button text */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;           /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transition effects */
+}
+
+/* Hover effect */
+.contact-btn:hover {
+    background-color: #2980b9; /* Change background color on hover */
+    transform: scale(1.05);    /* Slightly increase size on hover */
+}
+
+/* Button focus/active state */
+.contact-btn:focus, .contact-btn:active {
+    outline: none;             /* Remove default outline on focus */
+    background-color: #1d6fa5; /* Darken background color on click */
+    transform: scale(0.98);    /* Slightly reduce size when clicked */
+}
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 15px; /* Added more padding for a better touch area */
     margin: 0 10px;
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 nav a:hover {
     background-color: #555;
 }
 
+/* Section Styles */
 section {
     padding: 20px;
 }
+.center-content {
+    text-align: left; /* Left-align text */
+    margin: 0 auto; /* Center the section itself, not the text */
+}
 
+/* Card Styles */
 .card {
-    border: 1px solid #ddd;
+    border: 8px solid #3498db;
     border-radius: 8px;
     overflow: hidden;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Add a hover effect */
+    background-color: #424242; /* Add background color */
+    color: white; /* White text color */
+}
+.card h3, .card p {
+    color: white; /* Ensure all headings and paragraphs have white text */
+}
+.about-me-image {
+    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Center the image if needed */
+    margin: 0 auto; /* Center the image in its container */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 .card-image {
@@ -50,13 +104,35 @@ section {
 .card-content {
     padding: 20px;
 }
+
+/* Hero Section Styles */
 .hero {
     background-color: #007bff;
+    border: 8px solid #ffffff;
     color: white;
     text-align: center;
     padding: 50px 20px;
     margin-bottom: 20px;
 }
+.about-border {
+    border: 8px solid #007bff; /* Blue border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    margin: 20px auto; /* Center the section */
+    background-color:  #424242; /* Light background for contrast */
+    max-width: 800px; /* Limit the width of the section */
+    color: white;
+}
+
+.about-content {
+    max-width: 600px; /* Control text width */
+    margin: 0 auto; /* Center the text block */
+    margin-right: 20px; /* Add some left margin to move text more to the right */
+    text-align: left; /* Keep text left-aligned */
+    color: white;
+    
+}
+
 
 .hero h2 {
     font-size: 2em;
@@ -66,16 +142,21 @@ section {
 .hero p {
     font-size: 1.2em;
 }
+
+/* Card Container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+/* Responsive Card Styles */
 .card {
-    flex: 0 0 calc(30% - 20px); /* Adjust the width as needed */
+    flex: 0 0 calc(30% - 20px);
     margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Keep the text color consistent */
+
 }
 
 .card img {
@@ -83,9 +164,7 @@ section {
     height: auto;
 }
 
-.card-content {
-    padding: 20px;
-}
+/* Centered Content */
 .center-content {
     text-align: center;
 }
@@ -93,4 +172,17 @@ section {
 .about-me-image {
     display: block;
     margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(45% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 0 0 100%; /* Stack cards on very small screens */
+    }
 }
