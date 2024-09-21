@@ -25,6 +25,46 @@ nav {
     background-color: #444;
     padding: 10px;
 }
+/* Slideshow CSS */
+/* Slideshow CSS */
+.slideshow-container {
+    position: relative; /* Needed for absolute positioning of buttons */
+    max-width: 80%;
+    margin: auto;
+}
+
+.mySlides img {
+    width: 100%; /* Use 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%); /* Center buttons vertically */
+}
+
+.next {
+    right: 10px; /* Add some spacing from the edge */
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 10px; /* Add some spacing from the edge */
+    border-radius: 3px 3px 0 0;
+}
+
+
 .contact-btn {
     background-color: #3498db; /* Button background color */
     color: white;              /* Button text color */
